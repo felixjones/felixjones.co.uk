@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+{% if page.collection %}
+  {% assign collections = site.collections | where_exp: "item", "item.label != 'posts'" %}
+
+  {% assign oneMore = false %}
+  {% for collection in collections %}
+    {% if collection.label == page.collection %}
+      {% assign oneMore = true %}
+    {% elsif oneMore == false %}
+      {% assign prevColPage = site[collection.label] | sort: 'ordering' | last %}
+    {% else %}
+      {% assign nextColPage = site[collection.label] | sort: 'ordering' | first %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+  {% assign posts = site[page.collection] | sort: 'ordering' %}
+
+  {% for post in posts %}
+    {% if post.title == page.title %}
+      {% assign prevIndex = forloop.index0 | minus: 1 %}
+      {% assign nextIndex = forloop.index0 | plus: 1 %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+      .PageNavigation {
+        font-size: 14px;
+        display: block;
+        width: auto;
+        overflow: hidden;
+      }
+
+      .PageNavigation a {
+        display: block;
+        width: 33.33%;
+        float: left;
+        margin: 1em 0;
+      }
+
+      .PageNavigation .mid {
+        text-align: center;
+      }
+
+      .PageNavigation .prev {
+        text-align: right;
+      }
+    </style>
+
+{% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      {% if site.title and site.title != page.title %}
+      <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
+      {% endif %}
+
+      {% if page.collection %}
+      <div class="PageNavigation">
+        {% if nextIndex < posts.size %}
+        <a class="next" href="{{posts[nextIndex].url | relative_url}}">&laquo; {{ page.date | date: "%Y-%m-%d" }} - {{posts[nextIndex].title}}</a>
+        {% elsif nextColPage %}
+        <a class="next" href="{{nextColPage.url | relative_url }}">&laquo; {{ page.date | date: "%Y-%m-%d" }} - {{nextColPage.title}}</a>
+        {% else %}
+        <a class="next">-</a>
+        {% endif %}
+
+        <a class="mid" href="{{ "/" | absolute_url }}">Home</a>
+
+        {% if prevIndex >= 0 %}
+        <a class="prev" href="{{posts[prevIndex].url | relative_url}}">{{ page.date | date: "%Y-%m-%d" }} - {{posts[prevIndex].title}} &raquo;</a>
+        {% elsif prevColPage %}
+        <a class="prev" href="{{prevColPage.url | relative_url }}">{{ page.date | date: "%Y-%m-%d" }} - {{prevColPage.title}} &raquo;</a>
+        {% else %}
+        <a class="prev">-</a>
+        {% endif %}
+      </div>
+      {% endif %}
+
+      {% include toc.html html=content h_min=2 %}
+      {% include anchor_headings.html html=content %}
+      {% include disqus.html %}
+      {% include social-media-links.html %}
+
+      {% if page.collection %}
+      <div class="PageNavigation">
+        {% if nextIndex < posts.size %}
+        <a class="next" href="{{posts[nextIndex].url | relative_url}}">&laquo; {{ page.date | date: "%Y-%m-%d" }} - {{posts[nextIndex].title}}</a>
+        {% elsif nextColPage %}
+        <a class="next" href="{{nextColPage.url | relative_url }}">&laquo; {{ page.date | date: "%Y-%m-%d" }} - {{nextColPage.title}}</a>
+        {% else %}
+        <a class="next">-</a>
+        {% endif %}
+
+        <a class="mid" href="{{ "/" | absolute_url }}">Home</a>
+
+        {% if prevIndex >= 0 %}
+        <a class="prev" href="{{posts[prevIndex].url | relative_url}}">{{ page.date | date: "%Y-%m-%d" }} - {{posts[prevIndex].title}} &raquo;</a>
+        {% elsif prevColPage %}
+        <a class="prev" href="{{prevColPage.url | relative_url }}">{{ page.date | date: "%Y-%m-%d" }} - {{prevColPage.title}} &raquo;</a>
+        {% else %}
+        <a class="prev">-</a>
+        {% endif %}
+      </div>
+      {% endif %}
+
+      {% if site.github.private != true and site.github.license %}
+      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+        This site is open source. {% github_edit_link "Improve this page" %}.
+      </div>
+      {% endif %}
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>

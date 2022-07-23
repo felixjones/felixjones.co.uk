@@ -1,0 +1,18 @@
+remote_theme: pages-themes/primer@v0.6.0
+plugins:
+  - jekyll-remote-theme
+
+title: Felix Jones
+author: Felix Jones
+description: >
+  My personal website.
+
+show_excerpts: true
+
+defaults:
+  -
+    scope:
+        path: _posts
+        type: posts
+    values:
+      comments: false
