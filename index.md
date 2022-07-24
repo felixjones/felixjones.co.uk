@@ -1,7 +1,5 @@
 It's my blog.
 
-{% include social-media-links.html %}
-
 <ol>
 {% assign collections = site.collections | where_exp: "item", "item.label != 'posts'" %}
 {% for collection in collections %}
