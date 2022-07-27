@@ -1,17 +1,17 @@
 email:
   id: 'felix@felixjones.co.uk'
-  href: 'mailto:felix@felixjones.co.uk'
+  href: 'mailto:'
   title: 'Email'
   fa-icon: 'fa-envelope-square'
 
 twitter:
   id: 'Xilefian'
-  href: 'https://www.twitter.com/Xilefian'
+  href: 'https://www.twitter.com/'
   title: 'Twitter'
   fa-icon: 'fa-twitter-square'
 
 github:
   id: 'felixjones'
-  href: 'https://github.com/felixjones'
+  href: 'https://github.com/'
   title: 'GitHub'
   fa-icon: 'fa-github-square'
