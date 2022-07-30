@@ -95,9 +95,9 @@
       {% if page.collection %}
       <div class="PageNavigation">
         {% if nextIndex < posts.size %}
-        <a class="next" href="{{posts[nextIndex].url | relative_url}}">&laquo; {{ page.date | date: "%Y-%m-%d" }} - {{posts[nextIndex].title}}</a>
+        <a class="next" href="{{posts[nextIndex].url | relative_url}}">&laquo; {{ posts[nextIndex].date | date: "%Y-%m-%d" }} - {{posts[nextIndex].title}}</a>
         {% elsif nextColPage %}
-        <a class="next" href="{{nextColPage.url | relative_url }}">&laquo; {{ page.date | date: "%Y-%m-%d" }} - {{nextColPage.title}}</a>
+        <a class="next" href="{{nextColPage.url | relative_url }}">&laquo; {{nextColPage.title}}</a>
         {% else %}
         <a class="next">-</a>
         {% endif %}
@@ -105,9 +105,9 @@
         <a class="mid" href="{{ "/" | absolute_url }}">Home</a>
 
         {% if prevIndex >= 0 %}
-        <a class="prev" href="{{posts[prevIndex].url | relative_url}}">{{ page.date | date: "%Y-%m-%d" }} - {{posts[prevIndex].title}} &raquo;</a>
+        <a class="prev" href="{{posts[prevIndex].url | relative_url}}">{{ posts[prevIndex].date | date: "%Y-%m-%d" }} - {{posts[prevIndex].title}} &raquo;</a>
         {% elsif prevColPage %}
-        <a class="prev" href="{{prevColPage.url | relative_url }}">{{ page.date | date: "%Y-%m-%d" }} - {{prevColPage.title}} &raquo;</a>
+        <a class="prev" href="{{prevColPage.url | relative_url }}">{{prevColPage.title}} &raquo;</a>
         {% else %}
         <a class="prev">-</a>
         {% endif %}
