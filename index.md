@@ -1,4 +1,6 @@
-It's my blog.
+My personal website, with lots of ramblings in a sort of blog format. There's probably code involved, maybe some hot-takes.
+
+If this website looks minimalist, well it's because it is. Not because I believe in minimalism, but because these days I am too lazy to create web graphics or deal with HTML or CSS for more than 6 minutes at a time.
 
 <ol>
 {% assign collections = site.collections | where_exp: "item", "item.label != 'posts'" %}
