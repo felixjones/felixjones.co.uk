@@ -5,7 +5,8 @@ plugins:
 title: Felix Jones
 author: Felix Jones
 description: >
-  My personal website.
+  The blog of Xilefian.
+title_image: title.jpg
 
 future: true
 show_excerpts: true

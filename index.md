@@ -21,7 +21,11 @@ If you're wondering why the page is so minimalist: I am too lazy to create web g
   {% for post in site.posts %}
     <li>
       <h2><a href="{{ post.url | relative_url }}">{{ post.date | date: "%-d %B %Y" }} - {{ post.title }}</a></h2>
-      {{ post.excerpt }}
+      {% if post.description %}
+        {{ post.description }}
+      {% else %}
+        {{ post.excerpt }}
+      {% endif %}
     </li>
   {% endfor %}
 </ul>
