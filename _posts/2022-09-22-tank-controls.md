@@ -8,6 +8,8 @@ image: "assets/resi/dogs.jpeg"
 
 I am once again here to make the case that the thing everyone says is bad, is actually good.
 
+![Screenshot of Resident Evil. A zombie is biting Jill.]({{ "/assets/resi/bite.webp" | absolute_url }})
+
 # The problem.
 
 Take a look at the original PlayStation controller:
@@ -46,7 +48,9 @@ I'll try to explain that better: When you press "up" you define a new "north" wi
 
 No.
 
-I see a few comments every now and then from players who say the tank controls added tension to the horror. I do think they are assigning too much design thought behind the tank controls (IMO they are the solution for fine movement with digital inputs), but I do get what they're saying, it was an emergant part of the Resident Evil experience, attempting to back up from a zombie that got too close, only to trigger a jump scare behind you that you now need to sprint forward to avoid, running around the first zombie.
+I see a few comments every now and then from players who say the tank controls added tension to the horror. I do think they are assigning too much design thought behind the tank controls (IMO they are the solution for fine movement with digital inputs), but I do get what they're saying, it was an emergent part of the Resident Evil experience, attempting to back up from a zombie that got too close, only to trigger a jump scare behind you that you now need to sprint forward to avoid, running around the first zombie.
+
+This is probably felt best in Resident Evil 4, which is a third-person "over the shoulder" game. It was the last Resident Evil game before Capcom went down the weird path of making them action games. I feel the availability of strafing is what contributed to the move away from survival horror, and towards action games.
 
 With that player sentiment towards tank controls, I feel there is something to tank controls that's worth looking into.
 
