@@ -12,7 +12,7 @@ I am once again here to make the case that the thing everyone says is bad, is ac
 
 Take a look at the original PlayStation controller:
 
-![The PSX Gamepad]({{ "/assets/resi/PSX-Original-Controller.jpeg" | absolute_url }})    
+<img src='{{ "/assets/resi/PSX-Original-Controller.jpeg" | absolute_url }}' alt="The PSX Gamepad" width="400"/><br/>
 (Image by the awesome [Evan Amos](https://commons.wikimedia.org/wiki/User:Evan-Amos))
 
 Notice that this controller does not have analogue inputs. The player is forced to move only in the 8 directions allowed by the directional-pad on the left.
