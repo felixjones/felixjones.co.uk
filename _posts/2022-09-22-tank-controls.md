@@ -8,7 +8,7 @@ image: "assets/resi/dogs.jpeg"
 
 I am once again here to make the case that the thing everyone says is bad, is actually good.
 
-<img src='{{ "/assets/resi/bite.webp" | absolute_url }}' alt="Screenshot of Resident Evil. A zombie is biting Jill." width="400"/><br/>
+<img src='{{ "/assets/resi/bite.webp" | absolute_url }}' alt="Screenshot of Resident Evil. A zombie is biting Jill." width="600"/><br/>
 
 # The problem.
 
