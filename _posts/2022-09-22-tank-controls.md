@@ -29,7 +29,7 @@ If you were holding "left" to run towards the "left" edge of the screen, but the
 
 ## The Final Fantasy solution
 
-Final Fantasy on the PS1 (a game that also used fixed camera angles in a 3D world) solves this by:
+The PSX era Final Fantasy games (which also use fixed camera angles in a 3D world) solves this by:
 
 1. Making the location the player loads into be a little ways away from the edge of the screen
 2. Having larger screens that pan, instead of changing camera angle, requiring a loading screen between areas
@@ -58,7 +58,7 @@ Continuing the FPS trend, GoldenEye 64 uses tank controls. I don't think any of 
 
 ## A special FPS game
 
-[Resident Evil Survivor](https://en.wikipedia.org/wiki/Resident_Evil_Survivor). It's a game I feel I need to defend by itself, but I'll leave that for another ramble.
+[Resident Evil Survivor](https://en.wikipedia.org/wiki/Resident_Evil_Survivor). It's a game I feel I need to defend by itself, but I'll leave that for another rambly blog post.
 
 ![Screenshot of Resident Evil Survivor. It is a first person game, the player is shooting a zombie.]({{ "/assets/resi/re-survivor-zombie.jpeg" | absolute_url }})
 
@@ -68,6 +68,10 @@ This game uses an FPS control scheme similar to what GoldenEye 64 uses, with tan
 
 After re-playing this game a number of times over the many years (it is very replayable) I had the epiphamy: The controls of this game are the **same** as the mainline Resident Evil games! Tank controls, hold button to aim/activate shooting, direction pad is used to adjust aiming (turning and aiming up/down).
 
+# An extra rant about PSX vs PS1:
+
+Yes Sony made a console called the PSX which was a PS2. But we all called the PS1 the PSX back in the day. I have a theory that this comes from the codename for the original [Nintendo PlayStation](https://en.wikipedia.org/wiki/Super_NES_CD-ROM#Prototype), which has a chip with the markings "SFX" (not to be confused with the Super FX chip). When Sony moved onto the PlayStation they probably just replaced the Super Famicom with PlayStation to make PSX. Maybe the X means CD ROM eXpansion???.
+
 ---
 
-Alright, that's the end of my rant.
+Alright, that's the end of my ranting for today.
