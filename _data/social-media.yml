@@ -21,3 +21,9 @@ linkedin:
   href: 'https://www.linkedin.com/in/'
   title: 'LinkedIn'
   fa-icon: 'fa-linkedin'
+
+rss:
+  id: 'feed.xml'
+  href: 'https://felixjones.co.uk/'
+  title: 'RSS'
+  fa-icon: 'fa-rss'
