@@ -15,5 +15,6 @@
 
   .highlighter-rouge {
     color: $text-gray-dark;
+    filter: invert(1);
   }
 }
