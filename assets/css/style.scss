@@ -4,12 +4,8 @@
 @import "{{ site.theme }}";
 
 @media (prefers-color-scheme: dark) {
-  .day.dark-scheme {
-    background: #333;
-    color: white;
-  }
-  .night.dark-scheme {
-    background: black;
-    color: #ddd;
+  body {
+      background-color: black;
+      filter: hue-rotate(180deg) invert(90%);
   }
 }
