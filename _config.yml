@@ -3,6 +3,8 @@ plugins:
   - jekyll-remote-theme
   - jekyll-feed
 
+include: [".well-known"]
+
 title: Felix Jones
 author: Felix Jones
 description: >
