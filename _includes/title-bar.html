@@ -1,5 +1,3 @@
 {% if site.title and site.title != page.title %}
-<div style="border-bottom: 1px solid #eaecef; padding-bottom: 16px;">
-  <h1 style="border-bottom: none; padding-bottom: none;"><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1> {% include social-media-links.html %}
-</div>
+<h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1> {% include social-media-links.html %}
 {% endif %}

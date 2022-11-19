@@ -22,13 +22,6 @@ linkedin:
   title: 'LinkedIn'
   fa-icon: 'fa-linkedin'
 
-mastodon:
-  id: '@Xilefian'
-  href: 'https://mastodon.social/'
-  title: 'Mastodon'
-  fa-icon: 'fa-brands fa-mastodon'
-  rel: 'me'
-
 rss:
   id: 'feed.xml'
   href: 'https://felixjones.co.uk/'
