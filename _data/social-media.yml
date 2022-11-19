@@ -26,7 +26,7 @@ mastodon:
   id: '@Xilefian'
   href: 'https://mastodon.social/'
   title: 'Mastodon'
-  fa-icon: 'fa-mastodon'
+  fa-icon: 'fa-brands fa-mastodon'
   rel: 'me'
 
 rss:
