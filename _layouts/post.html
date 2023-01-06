@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 
-{% for collection in site.collections %}
-  <!-- page {{page.collection}} for {{collection}} -->
-{% endfor %}
-
 {% if page.collection %}
   {% assign collections = site.collections | where_exp: "item", "item.label != 'posts'" %}
 
-  {% if site.collections contains page.collection %}
+  {% if collections contains page.collection %}
     {% assign isBlog = false %}
   {% else %}
     {% assign isBlog = true %}
@@ -19,11 +15,11 @@
       {% if collection.label == page.collection %}
         {% assign oneMore = true %}
       {% elsif oneMore == false %}
-        {% unless site.collections contains prevColPage.collection %}
+        {% unless collections contains prevColPage.collection %}
           {% assign prevColPage = site[collection.label] | sort: 'ordering' | last %}
         {% endunless %}
       {% else %}
-        {% unless site.collections contains nextColPage.collection %}
+        {% unless collections contains nextColPage.collection %}
           {% assign nextColPage = site[collection.label] | sort: 'ordering' | first %}
           {% break %}
         {% endunless %}
