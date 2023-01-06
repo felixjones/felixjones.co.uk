@@ -202,9 +202,9 @@ If you are not using devkitARM then you'll need to adjust accordingly, for examp
 
 Due to a quirk in how mGBA runs and how VSCode waits for gdb-servers to connect, we have to launch mGBA as its own process so there’s no deadlock between it and VSCode.
 
-On Windows this can be done with the start /b "" command. On Linux and macOS you need only to end your shell command with the ampersand symbol &, however on macOS we can open the mGBA app in its own process with the open -a command.
+On Windows this can be done with the `start /b ""` command. On Linux and macOS you need only to end your shell command with the ampersand symbol `&`, however on macOS we can open the mGBA app in its own process with the `open -a` command.
 
-mGBA uses the -g option to start its gdb-server, so we need to include that.
+mGBA uses the `-g` option to start its gdb-server, so we need to include that.
 
 ```json
 "windows": {
