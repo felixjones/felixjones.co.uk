@@ -3,7 +3,12 @@
         data-repo-id="R_kgDOHtM_Jw"
         data-category="Blog Comments"
         data-category-id="DIC_kwDOHtM_J84CSYvf"
-        data-mapping="pathname"
+        {% if isBlog %}
+        data-mapping="pathname"        
+        {% else %}
+        data-mapping="specific"
+        data-term="{{ page.collection.title }}"        
+        {% endif %}
         data-strict="0"
         data-reactions-enabled="1"
         data-emit-metadata="0"
