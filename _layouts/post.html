@@ -3,7 +3,7 @@
 {% if page.collection %}
   {% assign collections = site.collections | where_exp: "item", "item.label != 'posts'" %}
 
-  {% if site.collections | map: "label" contains page.collection %}  
+  {% if site.collections contains page.collection %}  
     {% assign isBlog = false %}
   {% else %}
     {% assign isBlog = true %}
@@ -11,6 +11,7 @@
 
   {% assign oneMore = false %}
   {% for collection in collections %}
+    <!-- {{page.collection}} -->
     {% if collection.label == page.collection %}
       {% assign oneMore = true %}
     {% elsif oneMore == false %}
