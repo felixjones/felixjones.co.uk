@@ -3,24 +3,29 @@
 {% if page.collection %}
   {% assign collections = site.collections | where_exp: "item", "item.label != 'posts'" %}
 
-  {% if site.collections contains page.collection %}  
+  {% if site.collections contains page.collection %}
     {% assign isBlog = false %}
   {% else %}
     {% assign isBlog = true %}
   {% endif %}
 
-  {% assign oneMore = false %}
-  {% for collection in collections %}
-    <!-- {{page.collection}} -->
-    {% if collection.label == page.collection %}
-      {% assign oneMore = true %}
-    {% elsif oneMore == false %}
-      {% assign prevColPage = site[collection.label] | sort: 'ordering' | last %}
-    {% else %}
-      {% assign nextColPage = site[collection.label] | sort: 'ordering' | first %}
-      {% break %}
-    {% endif %}
-  {% endfor %}
+  {% if isBlog %}
+    {% assign oneMore = false %}
+    {% for collection in collections %}
+      {% if collection.label == page.collection %}
+        {% assign oneMore = true %}
+      {% elsif oneMore == false %}
+        {% unless site.collections contains prevColPage.collection %}
+          {% assign prevColPage = site[collection.label] | sort: 'ordering' | last %}
+        {% endunless %}
+      {% else %}
+        {% unless site.collections contains nextColPage.collection %}
+          {% assign nextColPage = site[collection.label] | sort: 'ordering' | first %}
+          {% break %}
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
 
   {% assign posts = site[page.collection] | sort: 'ordering' %}
 
