@@ -9,12 +9,6 @@
     {% assign isBlog = false %}
   {% endif %}
 
-  {% if isBlog %}
-    <!-- is blog ({{page}} or {{page.collection}} or {{page.collection.label}}) -->
-  {% else %}
-    <!-- is not blog ({{page}} or {{page.collection}} or {{page.collection.label}}) -->
-  {% endif %}
-
   {% unless isBlog %}
     {% assign oneMore = false %}
     {% for collection in collections %}
