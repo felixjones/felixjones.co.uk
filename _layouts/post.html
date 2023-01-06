@@ -3,16 +3,16 @@
 {% if page.collection %}
   {% assign collections = site.collections | where_exp: "item", "item.label != 'posts'" %}
 
-  {% if page.collection.label == 'posts' %}
+  {% if page.collection == 'posts' %}
     {% assign isBlog = true %}
   {% else %}
     {% assign isBlog = false %}
   {% endif %}
 
   {% if isBlog %}
-    <!-- is blog ({{page.collection.label}}) -->
+    <!-- is blog ({{page}} or {{page.collection}} or {{page.collection.label}}) -->
   {% else %}
-    <!-- is not blog ({{page.collection.label}}) -->
+    <!-- is not blog ({{page}} or {{page.collection}} or {{page.collection.label}}) -->
   {% endif %}
 
   {% unless isBlog %}
@@ -21,11 +21,11 @@
       {% if collection.label == page.collection %}
         {% assign oneMore = true %}
       {% elsif oneMore == false %}
-        {% unless prevColPage.collection.label == 'posts' %}
+        {% unless collection.label == 'posts' %}
           {% assign prevColPage = site[collection.label] | sort: 'ordering' | last %}
         {% endunless %}
       {% else %}
-        {% unless prevColPage.collection.label == 'posts' %}
+        {% unless collection.label == 'posts' %}
           {% assign nextColPage = site[collection.label] | sort: 'ordering' | first %}
           {% break %}
         {% endunless %}
