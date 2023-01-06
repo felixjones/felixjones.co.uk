@@ -9,7 +9,7 @@ The incredible [mGBA](https://mgba.io) emulator comes with its own [gdbserver](h
 
 When combined with a GDB compatible IDE, such as Visual Studio Code, it becomes possible to write code for the Game Boy Advance, drop a breakpoint in that code, run mGBA, and step-by-step execute code, inspecting the state of registers, memory, and variables.
 
-If you just want an end result `launch.json` to copy-paste and modify then [see the final launch.json](#the-final-launchjson).
+If you just want an end result `launch.json` to copy-paste and modify then [see the final "launch.json"](#the-final-launchjson).
 
 ---
 
@@ -19,7 +19,7 @@ This is a tutorial for setting up the GDB debugger for Visual Studio Code.
 
 I won't cover setting up GBA development for Visual Studio Code, just setting up debugging.
 
-# Create "launch.json"
+# Creating "launch.json"
 
 If you don't already have a `.vscode` directory, go ahead and make that.
 
@@ -160,6 +160,8 @@ Delete the upper level `"miDebuggerPath"` and `"setupCommands"` fields, and repl
 }
 ```
 
+### miDebuggerPath
+
 Set the `"miDebuggerPath"` to where you have `arm-none-eabi-gdb` installed on your system.
 
 If you are using [devkitARM with devkitPro](https://devkitpro.org) this debugger can be located in `devkitpro/devkitARM/bin/arm-none-eabi-gdb`, and if you have the `DEVKITARM` environment variable set you can use `${env:DEVKITARM}/bin/arm-none-eabi-gdb` (with an added `.exe` on Windows).
@@ -196,7 +198,7 @@ If you are not using devkitARM then you'll need to adjust accordingly, for examp
 }
 ```
 
-As for the `"setupCommands"`, these will also be platfrom specific.
+### setupCommands
 
 Due to a quirk in how mGBA runs and how VSCode waits for gdb-servers to connect, we have to launch mGBA as its own process so there’s no deadlock between it and VSCode.
 
@@ -264,7 +266,7 @@ Again, inspect these settings closely and make sure the path match to where you 
 
 If you only use Linux, or macOS, or Windows, then you can delete the fields for the other platforms.
 
-## The final launch.json
+# The final "launch.json"
 
 ```json
 {
@@ -358,7 +360,7 @@ For my CMake situation my launch.json file looks like this:
 }
 ```
 
-## Drop a breakpoint
+# Drop a breakpoint
 
 At this point we can try out dropping a breakpoint and debugging.
 
