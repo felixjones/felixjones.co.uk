@@ -9,7 +9,7 @@ The incredible [mGBA](https://mgba.io) emulator comes with its own [gdbserver](h
 
 When combined with a GDB compatible IDE, such as Visual Studio Code, it becomes possible to write code for the Game Boy Advance, drop a breakpoint in that code, run mGBA, and step-by-step execute code, inspecting the state of registers, memory, and variables.
 
-If you just want an end result `launch.json` to copy-paste and modify then [see the final launch.json](#the-final-launch.json).
+If you just want an end result `launch.json` to copy-paste and modify then [see the final launch.json](#the-final-launchjson).
 
 ---
 
