@@ -21,3 +21,10 @@ defaults:
         type: posts
     values:
       comments: false
+
+collections:
+  mgba_gdb:
+    title: "GDB Debugging with mGBA"
+    output: true
+    order:
+      - vscode.md
