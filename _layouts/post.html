@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 
+{% for collection in site.collections %}
+  <!-- page {{page.collection}} for {{collection}} -->
+{% endfor %}
+
 {% if page.collection %}
   {% assign collections = site.collections | where_exp: "item", "item.label != 'posts'" %}
 
@@ -43,11 +47,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    {% unless isBlog %}
-      <meta content="{{page.collection.title}}" property="og:title" />
-    {% endunless %}
-
     <script src="https://kit.fontawesome.com/d9b3cbd1ff.js" crossorigin="anonymous"></script>
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="/feed.xml">
     <style type="text/css">
