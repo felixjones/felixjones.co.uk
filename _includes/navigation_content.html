@@ -1,8 +1,8 @@
 <div class="PageNavigation">
     {% if prevIndex >= 0 %}
-    <a class="next" href="{{posts[prevIndex].url | relative_url}}">{{ posts[prevIndex].date | date: "%Y-%m-%d" }} - {{posts[prevIndex].title}} &raquo;</a>
+    <a class="next" href="{{posts[prevIndex].url | relative_url}}">&laquo; {{posts[prevIndex].title}}</a>
     {% elsif prevColPage %}
-    <a class="next" href="{{prevColPage.url | relative_url }}">{{prevColPage.title}} &raquo;</a>
+    <a class="next" href="{{prevColPage.url | relative_url }}">&laquo; {{prevColPage.title}}</a>
     {% else %}
     <a class="next">-</a>
     {% endif %}
@@ -10,9 +10,9 @@
     <a class="mid" href="{{ "/" | absolute_url }}">Home</a>
 
     {% if nextIndex < posts.size %}
-    <a class="prev" href="{{posts[nextIndex].url | relative_url}}">&laquo; {{ posts[nextIndex].date | date: "%Y-%m-%d" }} - {{posts[nextIndex].title}}</a>
+    <a class="prev" href="{{posts[nextIndex].url | relative_url}}">{{posts[nextIndex].title}} &raquo;</a>
     {% elsif nextColPage %}
-    <a class="prev" href="{{nextColPage.url | relative_url }}">&laquo; {{nextColPage.title}}</a>
+    <a class="prev" href="{{nextColPage.url | relative_url }}">{{nextColPage.title}} &raquo;</a>
     {% else %}
     <a class="prev">-</a>
     {% endif %}

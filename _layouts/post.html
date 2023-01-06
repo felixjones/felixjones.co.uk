@@ -86,11 +86,7 @@
 
       {% include toc.html html=content h_min=1 %}
       {% include anchor_headings.html html=content %}
-      {% if isBlog %}
-        {% include giscus.html %}
-      {% else %}
-        {% include giscus_content.html %}
-      {% endif %}
+      {% include giscus.html %}
 
       {% if page.collection %}
         {% if isBlog %}
