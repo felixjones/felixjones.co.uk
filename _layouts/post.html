@@ -23,12 +23,12 @@
       {% elsif oneMore == false %}
         {% if prevColPage.collection.label == 'posts' %}
           {% assign prevColPage = site[collection.label] | sort: 'ordering' | last %}
-        {% endunless %}
+        {% endif %}
       {% else %}
         {% if prevColPage.collection.label == 'posts' %}
           {% assign nextColPage = site[collection.label] | sort: 'ordering' | first %}
           {% break %}
-        {% endunless %}
+        {% endif %}
       {% endif %}
     {% endfor %}
   {% endif %}
