@@ -21,3 +21,11 @@ defaults:
         type: posts
     values:
       comments: false
+
+collections:
+  content_test:
+    title: "Testing 123"
+    output: true
+    order:
+      - first.md
+      - second.md

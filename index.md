@@ -17,6 +17,8 @@ If you're wondering why the page is so minimalist: I am too lazy to create web g
 {% endfor %}
 </ol>
 
+---
+
 <ul>
   {% for post in site.posts %}
     <li>
