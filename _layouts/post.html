@@ -3,7 +3,11 @@
 {% if page.collection %}
   {% assign collections = site.collections | where_exp: "item", "item.label != 'posts'" %}
 
-  {% if collections contains page.collection %}
+  {% for c in site.collections %}  
+    <!-- {{c.label}} -->
+  {% endfor %}
+
+  {% if page.collection.label != 'posts' %}
     {% assign isBlog = false %}
   {% else %}
     {% assign isBlog = true %}
