@@ -3,14 +3,16 @@
 {% if page.collection %}
   {% assign collections = site.collections | where_exp: "item", "item.label != 'posts'" %}
 
-  {% for c in site.collections %}  
-    <!-- {{c.label}} -->
-  {% endfor %}
-
-  {% if page.collection.label != 'posts' %}
-    {% assign isBlog = false %}
-  {% else %}
+  {% if page.collection.label == 'posts' %}
     {% assign isBlog = true %}
+  {% else %}
+    {% assign isBlog = false %}
+  {% endif %}
+
+  {% if isBlog %}
+    <!-- is blog -->
+  {% else %}
+    <!-- is not blog -->
   {% endif %}
 
   {% if isBlog %}
@@ -19,11 +21,11 @@
       {% if collection.label == page.collection %}
         {% assign oneMore = true %}
       {% elsif oneMore == false %}
-        {% unless collections contains prevColPage.collection %}
+        {% if prevColPage.collection.label == 'posts' %}
           {% assign prevColPage = site[collection.label] | sort: 'ordering' | last %}
         {% endunless %}
       {% else %}
-        {% unless collections contains nextColPage.collection %}
+        {% if prevColPage.collection.label == 'posts' %}
           {% assign nextColPage = site[collection.label] | sort: 'ordering' | first %}
           {% break %}
         {% endunless %}
