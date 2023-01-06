@@ -2,20 +2,13 @@ My personal website, with lots of ramblings in a sort-of-blog format. There's pr
 
 If you're wondering why the page is so minimalist: I am too lazy to create web graphics or deal with HTML or CSS for more than 6 minutes at a time.
 
-<ol>
+<ul style="padding-left: 0px text-align: center;">
 {% assign collections = site.collections | where_exp: "item", "item.label != 'posts'" %}
 {% for collection in collections %}
-  <li>
-    <a>{{ collection.title }}</a>
-    <ol>
-    {% assign posts = site[collection.label] | sort: 'ordering' %}
-    {% for post in posts %}
-      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-    {% endfor %}
-    </ol>
-  </li>
+  {% assign firstPost = site[collection.label] | sort: 'ordering' | first %}
+  <li style="display: inline-block; padding: 10px 20px;"><a href="{{ firstPost.url | relative_url }}">{{ collection.title }}</a></li>
 {% endfor %}
-</ol>
+</ul>
 
 ---
 
