@@ -10,28 +10,28 @@
   {% endif %}
 
   {% if isBlog %}
-    <!-- is blog -->
+    <!-- is blog ({{page.collection.label}}) -->
   {% else %}
-    <!-- is not blog -->
+    <!-- is not blog ({{page.collection.label}}) -->
   {% endif %}
 
-  {% if isBlog %}
+  {% unless isBlog %}
     {% assign oneMore = false %}
     {% for collection in collections %}
       {% if collection.label == page.collection %}
         {% assign oneMore = true %}
       {% elsif oneMore == false %}
-        {% if prevColPage.collection.label == 'posts' %}
+        {% unless prevColPage.collection.label == 'posts' %}
           {% assign prevColPage = site[collection.label] | sort: 'ordering' | last %}
-        {% endif %}
+        {% endunless %}
       {% else %}
-        {% if prevColPage.collection.label == 'posts' %}
+        {% unless prevColPage.collection.label == 'posts' %}
           {% assign nextColPage = site[collection.label] | sort: 'ordering' | first %}
           {% break %}
-        {% endif %}
+        {% endunless %}
       {% endif %}
     {% endfor %}
-  {% endif %}
+  {% endunless %}
 
   {% assign posts = site[page.collection] | sort: 'ordering' %}
 
