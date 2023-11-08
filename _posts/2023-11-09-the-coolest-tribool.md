@@ -161,7 +161,7 @@ In this code, the second `lsrs` converts the sign bit into the number `1` and ad
 
 Notice that I showed the GCC `-O1` assembly output for the fixed implementation of sign-extended tribool.
 
-For development on embedded systems, especially retro consoles like the GBA, you should really be using `-Og`.
+For GDB debugging on embedded systems, especially retro consoles like the GBA, you should really be using `-Og`.
 
 GCC `-Og` 32-bit ARM:
 
