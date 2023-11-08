@@ -434,4 +434,4 @@ inv_tribool:
 
 # Compiler Explorer link
 
-https://godbolt.org/z/z6Y6efb9h
+[godbolt.org/z/z6Y6efb9h](https://godbolt.org/z/z6Y6efb9h)
