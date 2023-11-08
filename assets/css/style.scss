@@ -13,12 +13,16 @@
     color: #58a6ff;
   }
 
-  img {
-    background-color: #0d1117;
+  .markdown-body img {
+    background-color: transparent;
   }
 
-  table {
-    background-color: #0d1117;
+  .markdown-body table tr {
+    background-color: #ddd1;
+  }
+
+  .markdown-body table tr:nth-child(2n) {
+    background-color: #ddd3;
   }
 
   .highlighter-rouge {
