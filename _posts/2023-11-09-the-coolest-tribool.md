@@ -253,9 +253,9 @@ Looking back at the 8-bit sign extended binary:
 
 The two correct states (`0` and `1`) only differ by bit index 0 (the lowest bit), and the two incorrect states (`-2` and `-1`) differ by *the same* bit index 0.
 
-If we were to shift left by 1 bit with sign extend then we can separate the correct and incorrect states into two values:
+If we were to shift right by 1 bit with sign extend then we can separate the correct and incorrect states into two values:
 
-| 2-bit Mask | 8-bit Sign Extended | Shifted left 1  | Fix State |
+| 2-bit Mask | 8-bit Sign Extended | Shifted right 1  | Fix State |
 |------------|---------------------|-----------------|-----------|
 | 0b00       | 0b00000000          | 0b00000000      | 0         |
 | 0b01       | 0b00000001          | 0b00000000      | 0         |
@@ -317,9 +317,9 @@ After spending so long staring at the bits, I noticed something: The values I wa
 | 0b10       | 0b11111**11**1            |
 | 0b11       | 0b00000**00**0            |
 
-Just left shifting one more place (with sign extend) gets the results I had been looking for.
+Just right shifting one more place (with sign extend) gets the results I had been looking for.
 
-| 2-bit Mask | 8-bit Sign Extended + `1` | Shift Left | Tribool State |
+| 2-bit Mask | 8-bit Sign Extended + `1` | Shift Right | Tribool State |
 |------------|---------------------------|------------|---------------|
 | 0b00       | 0b00000001                | 0b00000000 | 0             |
 | 0b01       | 0b00000010                | 0b00000001 | 1             |
