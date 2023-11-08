@@ -25,6 +25,10 @@
     background-color: #ddd3;
   }
 
+  .markdown-body pre {
+    background-color: #090705;
+  }
+
   .highlighter-rouge {
     color: $text-gray-dark;
     filter: invert(1);
