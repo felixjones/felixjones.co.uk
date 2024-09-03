@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<XRD xmlns="http://docs.oasis-open.org/ns/xri/xrd-1.0">
-  <Link rel="lrdd" template="https://classic.felixjones.co.uk/.well-known/webfinger.php?resource={uri}"/>
-</XRD>
