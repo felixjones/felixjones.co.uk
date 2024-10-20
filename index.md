@@ -2,6 +2,8 @@ My personal website, with lots of ramblings in a sort-of-blog format. There's pr
 
 If you're wondering why the page is so minimalist: I am too lazy to create web graphics or deal with HTML or CSS for more than 6 minutes at a time.
 
+---
+
 <div id="micro-blog"></div>
 <script type="text/javascript">
   const FEED_URL = 'https://retrodev.social/api/v1/timelines/public?local=true';
@@ -20,7 +22,7 @@ If you're wondering why the page is so minimalist: I am too lazy to create web g
         <article class="status expanded" id="${post.id}" role="region" aria-label="@${account.username}, ${createdAt.toLocaleDateString(undefined, {month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric', hourCycle: 'h23'})}, language ${postLanguage}, ${post.replies_count} reply, ${post.favourites_count} favourite">
           <header class="status-header">
               <address>
-                  <a href=${account.url}" rel="author" title="Open profile">
+                  <a href="${account.url}" rel="author" title="Open profile">
                       <picture class="avatar" aria-hidden="true">
                           <source srcset="${account.avatar_static}" type="image/jpeg" media="(prefers-reduced-motion: reduce)">
                           <img src="${account.avatar}" alt="Avatar for ${account.username}" title="Avatar for ${account.username}">
@@ -91,6 +93,8 @@ If you're wondering why the page is so minimalist: I am too lazy to create web g
       document.getElementById('micro-blog').innerHTML = html;
     });
 </script>
+
+---
 
 <ul style="padding-left: 0px text-align: center;">
 {% assign collections = site.collections | where_exp: "item", "item.label != 'posts'" %}
