@@ -441,6 +441,7 @@
 
 .stats-grouping .stats-item dd {
     margin-left: 0;
+    padding: 0;
 }
 
 .stats-grouping .stats-item dt {
