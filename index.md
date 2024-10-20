@@ -14,7 +14,23 @@ If you're wondering why the page is so minimalist: I am too lazy to create web g
       `);
       const account = post.account;
       const createdAt = new Date(post.created_at);
-      const postLanguage = new Intl.DisplayNames(undefined, { type: 'language' }).of(post.language)
+      const postLanguage = new Intl.DisplayNames(undefined, { type: 'language' }).of(post.language);
+      const emojis = Array.from(post.emojis, emoji => {
+        return {
+          pattern: "[:]" + emoji.shortcode.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + "[:]",
+          html: `
+            <picture>
+              <source class="emoji" srcset="${emoji.static_url}" type="image/png" media="(prefers-reduced-motion: reduce)" width="25" height="25">
+              <img class="emoji" src="${emoji.url}" title=":${emoji.shortcode}:" alt=":${emoji.shortcode}:" loading="lazy" width="25" height="25">
+            </picture>
+          `
+        };
+      });
+      var content = post.content;
+      emojis.forEach(emoji => {
+        const regex = new RegExp(emoji.pattern, "g");
+        content = content.replace(regex, emoji.html);
+      });
       let html = `
         <article class="status expanded" id="${post.id}" role="region" aria-label="@${account.username}, ${createdAt.toLocaleDateString(undefined, {month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric', hourCycle: 'h23'})}, language ${postLanguage}, ${post.replies_count} reply, ${post.favourites_count} favourite">
           <header class="status-header">
@@ -36,7 +52,7 @@ If you're wondering why the page is so minimalist: I am too lazy to create web g
           <div class="status-body">
               <div class="text">        
                   <div class="content" lang="${post.language}">
-                      ${post.content}
+                      ${content}
                   </div>
               </div>
           </div>

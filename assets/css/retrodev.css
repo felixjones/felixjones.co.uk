@@ -500,3 +500,11 @@
 .status.expanded .status-info {
 	background: var(--status-focus-info-bg);
 }
+
+.emoji {
+    width: 1.45em;
+    height: 1.45em;
+    margin: -0.2em 0.02em 0;
+    object-fit: contain;
+    vertical-align: middle;
+}
