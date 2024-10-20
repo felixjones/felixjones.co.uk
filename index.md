@@ -2,6 +2,7 @@ My personal website, with lots of ramblings in a sort-of-blog format. There's pr
 
 If you're wondering why the page is so minimalist: I am too lazy to create web graphics or deal with HTML or CSS for more than 6 minutes at a time.
 
+<div id="micro-blog"></div>
 <script type="text/javascript">
   const FEED_URL = 'https://retrodev.social/api/v1/timelines/public?local=true';
   fetch(FEED_URL)
@@ -12,7 +13,6 @@ If you're wondering why the page is so minimalist: I am too lazy to create web g
         <link rel="stylesheet" href="assets/css/retrodev.css">
         <link rel="stylesheet" href="https://retrodev.social/assets/Fork-Awesome/css/fork-awesome.min.css">
       `);
-
       const account = post.account;
       const createdAt = new Date(post.created_at);
       const postLanguage = new Intl.DisplayNames(undefined, { type: 'language' }).of(post.language)
@@ -88,7 +88,7 @@ If you're wondering why the page is so minimalist: I am too lazy to create web g
           </a>
         </article>
       `;
-      document.body.insertAdjacentHTML("beforeend", html);
+      document.getElementById('micro-blog').innerHTML = html;
     });
 </script>
 
