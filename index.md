@@ -2,8 +2,6 @@ My personal website, with lots of ramblings in a sort-of-blog format. There's pr
 
 If you're wondering why the page is so minimalist: I am too lazy to create web graphics or deal with HTML or CSS for more than 6 minutes at a time.
 
----
-
 <div id="micro-blog"></div>
 <script type="text/javascript">
   const FEED_URL = 'https://retrodev.social/api/v1/timelines/public?local=true';
@@ -93,8 +91,6 @@ If you're wondering why the page is so minimalist: I am too lazy to create web g
       document.getElementById('micro-blog').innerHTML = html;
     });
 </script>
-
----
 
 <ul style="padding-left: 0px text-align: center;">
 {% assign collections = site.collections | where_exp: "item", "item.label != 'posts'" %}
