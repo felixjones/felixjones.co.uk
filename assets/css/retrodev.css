@@ -441,7 +441,6 @@
 
 .stats-grouping .stats-item dd {
     margin-left: 0;
-    margin-bottom: 0;
     padding: 0;
 }
 
@@ -457,6 +456,10 @@
 
 .status .status-info .status-stats .language {
 	margin-left: auto;
+}
+
+.status .status-info .status-stats .language dd {
+	margin-bottom: 0;
 }
 
 .status .status-info {
