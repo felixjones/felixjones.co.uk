@@ -11,7 +11,6 @@ If you're wondering why the page is so minimalist: I am too lazy to create web g
     .then(post => {
       document.head.insertAdjacentHTML("beforeend", `
         <link rel="stylesheet" href="assets/css/retrodev.css">
-        <link rel="stylesheet" href="https://retrodev.social/assets/Fork-Awesome/css/fork-awesome.min.css">
       `);
       const account = post.account;
       const createdAt = new Date(post.created_at);
