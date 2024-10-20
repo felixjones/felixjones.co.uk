@@ -417,7 +417,7 @@
     border: 0px solid black;
     border-color: rgb(207, 217, 222);
     border-top-width: 1px;
-    margin-left: 2%;
+    margin-left: 2.0rem;
     margin-right: 2.0rem;
 }
 
@@ -435,6 +435,14 @@
 .status .status-info .status-stats .stats-item {
 	display: flex;
 	gap: 0.4rem;
+}
+
+.stats-grouping .stats-item dd {
+    margin-left: 0;
+}
+
+.stats-grouping .stats-item dt {
+    margin-top: 0;
 }
 
 .status .status-info .status-stats .stats-item:not(.published-at) {
