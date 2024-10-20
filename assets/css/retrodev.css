@@ -56,6 +56,7 @@
 	width: 100%;
 	object-fit: cover;
 	background: var(--bg);
+    border-radius: 50%;
 }
 
 .status .status-header>address>a .author-strap {
@@ -413,6 +414,11 @@
 	color: var(--fg-reduced);
 	border-top: 0.15rem solid var(--status-info-border);
 	padding: 0.5rem 0.75rem;
+    border: 0px solid black;
+    border-color: rgb(207, 217, 222);
+    border-top-width: 1px;
+    margin-left: 2%;
+    margin-right: 2.0rem;
 }
 
 .status .status-info .status-stats {
@@ -474,6 +480,10 @@
 
 .status.expanded {
 	background: var(--status-focus-bg);
+    border: 0px solid black;
+    border-color: rgb(207, 217, 222);
+    border-radius: 12px;
+    border-width: 1px;
 }
 
 .status.expanded .status-info {
