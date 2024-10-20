@@ -21,7 +21,7 @@ If you're wondering why the page is so minimalist: I am too lazy to create web g
           <header class="status-header">
               <address>
                   <a href="${account.url}" rel="author" title="Open profile">
-                      <picture class="avatar" aria-hidden="true">
+                      <picture class="avatar" aria-hidden="true" style="visibility:hidden">
                           <source srcset="${account.avatar_static}" type="image/jpeg" media="(prefers-reduced-motion: reduce)">
                           <img src="${account.avatar}" alt="Avatar for ${account.username}" title="Avatar for ${account.username}">
                       </picture>

@@ -48,6 +48,7 @@
 	border: 0.15rem solid var(--avatar-border);
 	border-radius: var(--br);
 	overflow: hidden;
+    visibility: visible !important;
 }
 
 /* hides corners from img overflowing */
@@ -68,6 +69,7 @@
 		"display display"
 		"user    user";
 	gap: 0 0.5rem;
+    padding-top: 0.4rem;
 }
 
 .status .status-header>address>a .author-strap .displayname,
