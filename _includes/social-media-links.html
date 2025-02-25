@@ -4,7 +4,7 @@
     {% for entry in sm %}
         {% assign key = entry | first %}
         {% if sm[key].id %}
-            <a {% if sm[key].rel %} rel="{{ sm[key].rel }}" {% endif %} href="{{ sm[key].href }}{{ sm[key].id }}" title="{{ sm[key].title }}"><i class="fa {{ sm[key].fa-icon }} fa-1x"></i></a>
+            <a {% if sm[key].rel %} rel="{{ sm[key].rel }}" {% endif %} href="{{ sm[key].href }}{{ sm[key].id }}" title="{{ sm[key].title }}"><i class="{{ sm[key].fa-class }} {{ sm[key].fa-icon }} fa-1x"></i></a>
         {% endif %}
     {% endfor %}
 </span>

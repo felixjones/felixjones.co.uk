@@ -2,34 +2,40 @@ email:
   id: 'felix@felixjones.co.uk'
   href: 'mailto:'
   title: 'Email'
+  fa-class: 'fa'
   fa-icon: 'fa-envelope-open-text'
 
 mastodon-compatible:
   id: '@xilefian'
   href: 'https://retrodev.social/'
   title: 'Mastodon Compatible'
+  fa-class: 'fab'
   fa-icon: 'fa-mastodon'
 
 bluesky:
   id: 'xilefian.retrodev.social.ap.brid.gy'
   href: 'https://bsky.app/profile/'
   title: 'Bluesky'
+  fa-class: 'fab'
   fa-icon: 'fa-bluesky'
 
 github:
   id: 'felixjones'
   href: 'https://github.com/'
   title: 'GitHub'
+  fa-class: 'fab'
   fa-icon: 'fa-github-alt'
 
 linkedin:
   id: 'felixowjones'
   href: 'https://www.linkedin.com/in/'
   title: 'LinkedIn'
+  fa-class: 'fab'
   fa-icon: 'fa-linkedin'
 
 rss:
   id: 'feed.xml'
   href: 'https://felixjones.co.uk/'
   title: 'RSS'
+  fa-class: 'fa'
   fa-icon: 'fa-rss'
