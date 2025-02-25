@@ -4,11 +4,17 @@ email:
   title: 'Email'
   fa-icon: 'fa-envelope-open-text'
 
-twitter:
-  id: 'Xilefian'
-  href: 'https://www.twitter.com/'
-  title: 'Twitter'
-  fa-icon: 'fa-twitter'
+mastodon-compatible:
+  id: '@xilefian'
+  href: 'https://retrodev.social/'
+  title: 'Mastodon Compatible'
+  fa-icon: 'fa-mastodon'
+
+bluesky:
+  id: 'xilefian.retrodev.social.ap.brid.gy'
+  href: 'https://bsky.app/profile/'
+  title: 'Bluesky'
+  fa-icon: 'fa-bluesky'
 
 github:
   id: 'felixjones'
