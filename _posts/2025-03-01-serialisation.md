@@ -111,8 +111,6 @@ The `test_data::codec` static member is entirely built at compile-time, so the o
 
 In my current implementation I can see this:
 
-<table><tr><td>C++</td><td>Arm (thumb)</td></tr><tr style="vertical-align:top"><td>
-
 ```c++
 struct foo {
     int a;
@@ -139,8 +137,6 @@ int main() {
 }
 ```
 
-</td><td>
-
 ```arm
 movs r3, #1           
 movs r0, r5                            
@@ -163,8 +159,6 @@ add r1, sp, #12
 str r3, [sp, #12]               
 bl 0x8000780 <util::append_insert_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::operator=<std::array<char, 4u> >(std::array<char, 4u>&&)>
 ```
-
-</td></tr></table>
 
 Those four integer encodes are compiled into directly appending four `std::array<char, 4u>` chunks onto the end of a string.
 
