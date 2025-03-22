@@ -13,7 +13,7 @@ mastodon-compatible:
   fa-icon: 'fa-mastodon'
 
 bluesky:
-  id: 'xilefian.retrodev.social.ap.brid.gy'
+  id: 'xilefian.retrodev.social'
   href: 'https://bsky.app/profile/'
   title: 'Bluesky'
   fa-class: 'fab'
