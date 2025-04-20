@@ -31,6 +31,22 @@ If you're wondering why the page is so minimalist: I am too lazy to create web g
         const regex = new RegExp(emoji.pattern, "g");
         content = content.replace(regex, emoji.html);
       });
+      if (post.media_attachments.length > 0) {
+        content = content.concat(`<div style="display:flex;">`);
+        post.media_attachments.forEach(attachment => {
+            if (attachment.description != null) {
+                alt = `alt="${attachment.description}"`;
+            } else {
+                alt = ``;
+            }
+            content = content.concat(`
+            <div style="flex: 25%; padding: 5px;">
+                <a href="${attachment.url}"><img src="${attachment.preview_url}" style="width:100%" ${alt}></a>
+            </div>
+            `);
+        });
+        content = content.concat(`</div>`);
+      }
       let html = `
         <article class="status expanded" id="${post.id}" role="region" aria-label="@${account.username}, ${createdAt.toLocaleDateString(undefined, {month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric', hourCycle: 'h23'})}, language ${postLanguage}, ${post.replies_count} reply, ${post.favourites_count} favourite">
           <header class="status-header">
