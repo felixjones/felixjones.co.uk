@@ -34,7 +34,7 @@ The Japanese releases of Red and Green have differences to the international Red
 
 Check-out this [BoundaryBreak](https://www.youtube.com/@BoundaryBreak) episode that explores some of the differences:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RMZa3Eh-6ug?si=2wtFXC_8ST9AisrR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/RMZa3Eh-6ug?si=2wtFXC_8ST9AisrR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## It is worth doing well
 
@@ -76,7 +76,7 @@ I decided to break my rule of "What if Pokémon released internationally a year 
 
 I feel this can still be in the spirit of a "What if" because a female trainer for that generation did exist in the manga, as well as on the cover of the Japanese strategy guides, as covered in this video by [The Obsessive Gamer](https://www.youtube.com/@TheObsessiveGamer):
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xSeA3MzcoGY?si=EuiTWvxf2zBAOWK4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/xSeA3MzcoGY?si=EuiTWvxf2zBAOWK4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Let's take a look at Shinpokered's female trainer:
 
@@ -95,7 +95,7 @@ I looked around at other implementations of playable girl trainers, and I feel m
 
 <p align="center">
 <img src='{{ "/assets/pokegreen/4205screenshot2.png" | absolute_url }}' width="160"/>
-<img src='{{ "/assets/pokegreen/avatar-feminin-yellow-legacy.png" | absolute_url }}' width="160"/>
+<img src='{{ "/assets/pokegreen/yellowlegacy.png" | absolute_url }}' width="160"/>
 <img src='{{ "/assets/pokegreen/8100screenshot3.png" | absolute_url }}' width="160"/>
 </p>
 
@@ -166,7 +166,7 @@ I did give up with rendering the gloves with the excuse that sprite consistency 
 These were probably the most difficult sprites to work with as the canvas size is reduced to just 16x16 pixels, and the amount of colours available is reduced to 3.
 
 <p align="center">
-    <video controls>
+    <video controls width="100%">
         <source src='{{ "/assets/pokegreen/overworld.webm" | absolute_url }}' type="video/webm"/>
     </video>
 </p>
@@ -190,7 +190,7 @@ Adding the earring to the side sprite very much helped tie the sprite back to th
 Another feature that helped add depth was the light "shine" on the hair. I was holding off from doing this, but seeing a similar hair "shine" on the Pokémon Center attendants convinced me to try it.
 
 <p align="center">
-    <video controls>
+    <video controls width="100%">
         <source src='{{ "/assets/pokegreen/heal.webm" | absolute_url }}' type="video/webm"/>
     </video>
 </p>
@@ -312,7 +312,7 @@ This screenshot might not look special to players used to games after the first 
 This change I think will be most controversial. To allow the player to mimic the manga scenario, as well as to introduce some variety, when playing as the girl trainer the rival will pick the Pokémon that is **weak** to your choice.
 
 <p align="center">
-    <video controls>
+    <video controls width="100%">
         <source src='{{ "/assets/pokegreen/battle.webm" | absolute_url }}' type="video/webm"/>
     </video>
 </p>
