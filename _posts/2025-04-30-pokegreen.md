@@ -256,7 +256,7 @@ Here's what I settled with:
 The pose is from this image of the character from the Pokémon manga:
 
 <p align="center">
-<img src='{{ "/assets/pokegreen/GreenAdventures.png" | absolute_url }}'/>
+<img src='{{ "/assets/pokegreen/GreenAdventures.webp" | absolute_url }}'/>
 </p>
 
 See how I replaced the Pokédex with an original Game Boy. When I saw the manga image I thought "did the Pokédex even have its design in 1996?" - the Pokédex sprites in Oak's lab are re-used book sprites and mentions pages
