@@ -195,7 +195,7 @@ Another feature that helped add depth was the light "shine" on the hair. I was h
     </video>
 </p>
 
-# Titlescreen and Diploma
+# Diploma Screen
 
 Shinpokered uses the front sprite for the Diploma screen:
 
@@ -211,9 +211,15 @@ The original code actually pulls this image from the title screen trainer graphi
 
 Shinpokered does not display the female trainer sprite on the title screen, which is something I wanted to change.
 
-## Titlescreen Changes
+<p align="center">
+<img src='{{ "/assets/pokegreen/pokegreen-10.png" | absolute_url }}'/>
+</p>
 
-Before I reveal the girl trainer title screen sprite, I want to show something else I have changed
+# Titlescreen
+
+Now that I created a unique title screen sprite for the diploma I should use it on the actual titlescreen!
+
+But first, the logo:
 
 <p align="center">
 <img src='{{ "/assets/pokegreen/logo.png" | absolute_url }}'/>
@@ -233,7 +239,7 @@ And I am happy this captures the spirit of "What if Pokémon released internatio
 <img src='{{ "/assets/pokegreen/pokegreen-13.png" | absolute_url }}'/>
 </p>
 
-### Girl Titlescreen Sprite
+## Girl Titlescreen Sprite
 
 I struggled with this sprite, and I'm still not entirely happy with the end result (specifically the leg pose)
 
@@ -269,7 +275,7 @@ I considered changing the Pokédex out for a book, a Pokéball, or nothing at al
 
 The Game Boy is actually mirrored in the final sprite, this was because I wanted to keep a distinctive A and B button visible, but flipping those ended up blending them into the hand somewhat.
 
-### Random Titlescreen Sprite
+## Random Titlescreen Sprite
 
 I could have read the selected player type from the save file and display that on the title screen, but what about cases when creating a new game? I believe the title screen should remain neutral as to the contents of the save file.
 
