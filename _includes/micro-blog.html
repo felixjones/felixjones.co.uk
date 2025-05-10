@@ -7,7 +7,7 @@
     .then(data => data.find(post => post.account.username === "xilefian" && post.in_reply_to_id == null && post.in_reply_to_account_id == null))
     .then(post => {
       document.head.insertAdjacentHTML("beforeend", `
-        <link rel="stylesheet" href="assets/css/retrodev.css">
+        <link rel="stylesheet" href="https://felixjones.co.uk/assets/css/retrodev.css">
       `);
       const account = post.account;
       const createdAt = new Date(post.created_at);
@@ -24,6 +24,74 @@
         };
       });
       var content = post.content;
+
+      const contentParser = new DOMParser();
+      const contentDoc = contentParser.parseFromString(content, 'text/html');
+    
+      const anchors = contentDoc.getElementsByTagName('a');    
+      if (anchors.length > 0) {    
+        const lastAnchor = anchors[anchors.length - 1];
+
+        const href = lastAnchor.getAttribute('href');
+        const anchorUrl = new URL(href);
+
+        fetch(`https://twilight-frost-1c4e.hotfewix3000.workers.dev/?url=${lastAnchor.href}`)
+            .then(res => res.json())
+            .then(meta => {
+                const preview = document.createElement('div');
+                preview.innerHTML = `
+<style>
+.twitter-card {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: sans-serif;
+  overflow: hidden;
+  color: inherit;
+}
+.twitter-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.twitter-card-content {
+  padding: 10px;
+}
+.twitter-card-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 5px;
+}
+.twitter-card-description {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+.twitter-card-url {
+  font-size: 12px;
+  color: #888;
+  margin-top: 8px;
+}
+</style>
+<a href="${lastAnchor.href}" target="${anchorUrl.hostname === 'felixjones.co.uk' ? '_self' : '_blank'}" style="text-decoration: none; color: inherit;" class="twitter-card">
+    <img src="${meta.image}" alt="">
+    <div class="twitter-card-content">
+        <div class="twitter-card-title">${meta.title}</div>
+        <div class="twitter-card-description">${meta.description}</div>
+        <div class="twitter-card-url">${meta.url}</div>
+    </div>
+</a>
+            `;
+                const anchors = document.getElementById('preview-content').getElementsByTagName('a');
+                if (anchors.length > 0) {    
+                    const lastAnchor = anchors[anchors.length - 1];
+                    lastAnchor.replaceWith(preview);
+                }
+            });
+      }
+
       emojis.forEach(emoji => {
         const regex = new RegExp(emoji.pattern, "g");
         content = content.replace(regex, emoji.html);
@@ -64,7 +132,7 @@
           </header>
           <div class="status-body">
               <div class="text">        
-                  <div class="content" lang="${post.language}">
+                  <div id="preview-content" class="content" lang="${post.language}">
                       ${content}
                   </div>
               </div>
