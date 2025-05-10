@@ -3,15 +3,15 @@
 <meta name="twitter:creator" content="{{site.author}}">
 
 {% if page.title %}
-<meta name="twitter:title" content="{{page.title}}">
+<meta name="twitter:title" content="{{page.title | escape}}">
 {% else %}
-<meta name="twitter:title" content="{{site.title}}">
+<meta name="twitter:title" content="{{site.title | escape}}">
 {% endif %}
 
 {% if page.description %}
-<meta name="twitter:description" content="{{page.description}}">
+<meta name="twitter:description" content="{{page.description | escape}}">
 {% else %}
-<meta name="twitter:description" content="{{site.description}}">
+<meta name="twitter:description" content="{{site.description | escape}}">
 {% endif %}
 
 {% if page.image %}
