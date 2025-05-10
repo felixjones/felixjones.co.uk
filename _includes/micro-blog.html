@@ -46,6 +46,7 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   max-width: 500px;
+  max-height: 120px;
   text-decoration: none;
   font-family: sans-serif;
   overflow: hidden;
@@ -75,10 +76,10 @@
   font-size: 14px;
   color: #555;
   margin: 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
   overflow: hidden;
+  width: calc(100%);
+  display: inline-block;
+  text-overflow: ellipsis;
 }
 .twitter-card-url {
   font-size: 12px;
