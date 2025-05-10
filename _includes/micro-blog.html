@@ -85,11 +85,7 @@
     </div>
 </a>
             `;
-                const anchors = document.getElementById('preview-content').getElementsByTagName('a');
-                if (anchors.length > 0) {    
-                    const lastAnchor = anchors[anchors.length - 1];
-                    lastAnchor.replaceWith(preview);
-                }
+                document.getElementById('preview-content').append(preview);
             });
       }
 
