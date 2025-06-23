@@ -38,6 +38,9 @@
         fetch(`https://twilight-frost-1c4e.hotfewix3000.workers.dev/?url=${lastAnchor.href}`)
             .then(res => res.json())
             .then(meta => {
+                if (meta.description == null) {
+                  meta.description = '\xa0';
+                }
                 const preview = document.createElement('div');
                 preview.innerHTML = `
 <style>
