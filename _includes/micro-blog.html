@@ -38,6 +38,9 @@
         fetch(`https://twilight-frost-1c4e.hotfewix3000.workers.dev/?url=${lastAnchor.href}`)
             .then(res => res.json())
             .then(meta => {
+                if (meta.image == null) {
+                  meta.image = 'https://felixjones.co.uk/title.jpg?4362984378';
+                }
                 if (meta.description == null) {
                   meta.description = '\xa0';
                 }
